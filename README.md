@@ -1,9 +1,13 @@
-# Franchesca Garcia
+# Gráficos de delitos cometidos en Costa Rica
+Este documento muestra varios gráficos sobre delitos cometidos en Costa Rica 2023
 
-Estudiante de la Escuela de Geográfia de la [Universidad de Costa Rica] (https://WWW.ucr.ac.cr/). resive clases de programacion de lenguajes como [R](https://www.r-project.org/).
+**Fuente de los datos**: [Organismos de Investigacion Judicial] (OIJ) (https://sitiooij.poder-judicial.go.cr/index.php/ayuda/servicios-policiales/servicios-a-organizaciones/indice-de-transparencia-del-sector-publico-costarricense/datos-abiertos)
 
-![](https://www.mascotalia.es/wp-content/uploads/2014/11/gatos-siam%C3%A9s-800x600.jpg)
+## Delitos por provincia
+![](delitos_x_provincia.png)
 
-## imagen de gato domenestico 
-![](https://www.mascotalia.es/wp-content/uploads/2014/11/gatos-siam%C3%A9s-800x600.jpg)
+## Delitos por canton
+![](delitos_x_canton.png)
 
+## Homicidios por canton 
+![](homicidio_x_canton.png)
