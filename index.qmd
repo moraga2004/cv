@@ -1,0 +1,70 @@
+---
+title: "Asesinatos cometidos en Costa Rica en 2023"
+author: "Franchesca Moraga"
+lang: es
+format:
+  html : 
+    toc:  true
+    theme:  cerulean 
+
+---
+
+# Presentación
+Este documento contiene un conjunto de gráficos sobre homicidios cometidos en CR
+
+# lectura de datos
+
+```{r}
+#| label: lectura-datos
+
+#Lectura del archivo de datos
+delitos_2023 <- read.csv(file = "estadísticaspoliciales2023.csv")
+```
+
+# Filtrado de homicidios
+
+```{r}
+#| label: Filtrado-homicidios
+
+homicidios2023 <-
+  delitos_2023[delitos_2023$Delito == "HOMICIDIO", ]
+```
+
+# Homicidio por provincia
+
+```{r}
+#| label: homicidio_x_provincia
+
+# Conteo de homicidios por provincia
+
+homicidio_x_provincia <- table(homicidios2023$Provincia)
+
+#Ordenamiento por cantidad de homicidios 
+homicidios_x_provincia <- sort(homicidios2023$Provincia, decreasing = TRUE)
+barplot(
+  height = homicidio_x_provincia,
+  las = 2,
+  col = "black",
+  cex.names = 0.8,
+  main = "Homicidios por provincia"
+)
+```
+
+```{r}
+#| label: homicidio_x_canton
+
+# Conteo de homicidios por provincia
+
+homicidio_x_canton <- table(homicidios2023$Canton)
+
+#Ordenamiento por cantidad de homicidios 
+homicidios_x_canton <- sort(homicidios2023$Canton, decreasing = TRUE)
+homicidio_x_canton <- head(homicidio_x_canton, 20)
+barplot(
+  height = homicidio_x_canton,
+  las = 2,
+  col = "black",
+  cex.names = 0.8,
+  main = "Homicidios por provincia"
+)
+```
